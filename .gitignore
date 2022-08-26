@@ -1,0 +1,18 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/shared/node_modules
+/node_modules
+/website/firestore-debug.log
+/website/ui-debug.log
+/marketplace/yarn-error.log
+**/node_modules/**
+
+shared/firebase-key.json
+shared/generated/firestore-csvs
+
+.DS_store
+
+website/firebase-emulator-data
+
+website/firebase-export-*/

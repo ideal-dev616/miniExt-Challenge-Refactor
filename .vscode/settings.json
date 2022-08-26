@@ -1,0 +1,12 @@
+{
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "search.exclude": {
+        "**/node_modules": true
+    },
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.tsdk": "./marketplace/node_modules/typescript/lib",
+    "eslint.workingDirectories": ["./website", "./marketplace"],
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 80
+}

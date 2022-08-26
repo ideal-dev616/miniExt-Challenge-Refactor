@@ -1,0 +1,40 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "next/core-web-vitals"
+    ],
+    "plugins": [
+        "miniextensions",
+        "prefer-arrow-functions"
+    ],
+    "rules": {
+        "no-unused-vars": "off",
+        "no-useless-catch": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@next/next/no-img-element": "off",
+        "miniextensions/no-strict-null-undefined": "error",
+        "prefer-const": "warn",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
+        "guard-for-in": "error",
+        "prefer-arrow-functions/prefer-arrow-functions": [
+            "error",
+            {
+                "singleReturnOnly": false,
+                "classPropertiesAllowed": false,
+                "disallowPrototype": false,
+                "returnStyle": "unchanged"
+            }
+        ]
+    },
+    "ignorePatterns": [
+        "scripts"
+    ]
+}

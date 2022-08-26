@@ -1,0 +1,50 @@
+{
+    "name": "shared",
+    "version": "1.0.0",
+    "description": "Shared lib for miniextensions website/marketplace",
+    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@airtable/blocks": "^1.9.0",
+        "@headlessui/react": "^1.4.2",
+        "@heroicons/react": "^1.0.5",
+        "airtable": "^0.11.1",
+        "isomorphic-fetch": "^3.0.0",
+        "object-hash": "^2.2.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    },
+    "scripts": {
+        "build:eslint": "cd eslint && yarn",
+        "postinstall": "yarn build:eslint",
+        "generate-types": "echo 'If you have any uncommited git changes, then you must commit them first. If you do not have uncommited changes, ignore this message.\n\n' && git diff --quiet HEAD && ts-node ./scripts/extension-versions/generate",
+        "generate-vercelUrls": "ts-node ./scripts/generate-vercelUrls",
+        "export-firestore-CSVs": "ts-node ./scripts/export-firestore-CSVs",
+        "lint": "eslint --ext .ts ./",
+        "check-typescript": "tsc"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@types/jest": "^27.0.3",
+        "@types/node": "^16.11.10",
+        "@types/object-hash": "^2.2.1",
+        "@types/request-promise": "^4.1.48",
+        "@typescript-eslint/eslint-plugin": "^5.9.0",
+        "@typescript-eslint/parser": "^5.9.0",
+        "babel-jest": "^27.3.1",
+        "eslint": "^8.6.0",
+        "eslint-plugin-prefer-arrow-functions": "^3.1.4",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "firebase-admin": "^10.0.0",
+        "jest": "^27.3.1",
+        "json-2-csv": "^3.14.4",
+        "lodash": "^4.17.21",
+        "node-fetch": "2",
+        "prettier": "^2.4.1",
+        "ts-jest": "^27.0.7",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.2"
+    }
+}
